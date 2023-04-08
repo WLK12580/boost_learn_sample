@@ -23,7 +23,7 @@ void filemanager::SetFileAllPerms(const std::string &filename){
         std::cout<<"not File"<<std::endl;
         return ;
     }
-    auto perms=boost::filesystem::perms::owner_write;
+    auto perms=boost::filesystem::perms::owner_all;
     boost::system::error_code ec;
     boost::filesystem::permissions(filename,perms,ec);
     if(ec){
