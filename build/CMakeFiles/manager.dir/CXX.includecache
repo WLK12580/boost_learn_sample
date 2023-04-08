@@ -10,10 +10,12 @@
 manager.h
 /home/wlk/workspace/boost_learn_sample/manager.h
 
+/home/wlk/workspace/boost_learn_sample/manager.cpp
+manager.h
+/home/wlk/workspace/boost_learn_sample/manager.h
+
 /home/wlk/workspace/boost_learn_sample/manager.h
 iostream
--
-filesystem
 -
 memory
 -
