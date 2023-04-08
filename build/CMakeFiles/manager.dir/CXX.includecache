@@ -6,11 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/wlk/workspace/boost_learn_sample/copy_file.cpp
+/home/wlk/workspace/boost_learn_sample/main.cpp
+manager.h
+/home/wlk/workspace/boost_learn_sample/manager.h
+
+/home/wlk/workspace/boost_learn_sample/manager.h
 iostream
 -
-string
+filesystem
+-
+memory
 -
 boost/filesystem.hpp
+-
+thread
 -
 
