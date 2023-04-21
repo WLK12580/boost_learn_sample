@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/manager.dir/main.cpp.o"
+  "CMakeFiles/manager.dir/copy_file.cpp.o"
   "CMakeFiles/manager.dir/manager.cpp.o"
   "manager"
   "manager.pdb"

@@ -123,32 +123,32 @@ manager/fast:
 	$(MAKE) -f CMakeFiles/manager.dir/build.make CMakeFiles/manager.dir/build
 .PHONY : manager/fast
 
-main.o: main.cpp.o
+copy_file.o: copy_file.cpp.o
 
-.PHONY : main.o
+.PHONY : copy_file.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/manager.dir/build.make CMakeFiles/manager.dir/main.cpp.o
-.PHONY : main.cpp.o
+copy_file.cpp.o:
+	$(MAKE) -f CMakeFiles/manager.dir/build.make CMakeFiles/manager.dir/copy_file.cpp.o
+.PHONY : copy_file.cpp.o
 
-main.i: main.cpp.i
+copy_file.i: copy_file.cpp.i
 
-.PHONY : main.i
+.PHONY : copy_file.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/manager.dir/build.make CMakeFiles/manager.dir/main.cpp.i
-.PHONY : main.cpp.i
+copy_file.cpp.i:
+	$(MAKE) -f CMakeFiles/manager.dir/build.make CMakeFiles/manager.dir/copy_file.cpp.i
+.PHONY : copy_file.cpp.i
 
-main.s: main.cpp.s
+copy_file.s: copy_file.cpp.s
 
-.PHONY : main.s
+.PHONY : copy_file.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/manager.dir/build.make CMakeFiles/manager.dir/main.cpp.s
-.PHONY : main.cpp.s
+copy_file.cpp.s:
+	$(MAKE) -f CMakeFiles/manager.dir/build.make CMakeFiles/manager.dir/copy_file.cpp.s
+.PHONY : copy_file.cpp.s
 
 manager.o: manager.cpp.o
 
@@ -186,9 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... manager"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... copy_file.o"
+	@echo "... copy_file.i"
+	@echo "... copy_file.s"
 	@echo "... manager.o"
 	@echo "... manager.i"
 	@echo "... manager.s"

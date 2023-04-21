@@ -1,20 +1,32 @@
-#include<iostream>
-#include<memory>
-#include<boost/filesystem.hpp>
-#include<thread>
-namespace Manager{
-    namespace FileManager{
-        class filemanager
+#include <iostream>
+#include <memory>
+#include <boost/filesystem.hpp>
+#include <thread>
+#include<mutex>
+// #include<condition_variable>
+#include<fstream>
+namespace Manager
+{
+    namespace ThreadManager
+    {
+        class threadmanager
         {
             private:
-                
+                // int val_=0;
+                // std::mutex mu_l;
+                // std::condition_variable producer,consume;
             public:
-                bool IsFIle(const std::string &filename);
-                bool GetRelativePath(const std::string &path,std::string &ret_relative);
-                void SetFileAllPerms(const std::string &filename);
-                bool IsFileOrDirectory(const std::string &file);
+                void AddSum(const int &val1, const int &val2);
+                void UseMutex(const std::string &message,int &input_val) ;//message:消息类型，input_val:输入的参数
+                void Producer(int i);
+                void Consumer();
+                std::string RecvDataSent(const std::string &senddata);
+                std::string RecvDataFrom(const std::string &recvdata);
+                std::string RecvData(const std::string &data);
+                int fun(int x);
+                
         };
-  
+
     }
 
 }

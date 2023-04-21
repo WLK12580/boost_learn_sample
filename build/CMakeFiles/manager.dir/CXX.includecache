@@ -6,13 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/wlk/workspace/boost_learn_sample/main.cpp
+/home/wlk/workspace/boost_learn_sample/copy_file.cpp
 manager.h
 /home/wlk/workspace/boost_learn_sample/manager.h
-
-/home/wlk/workspace/boost_learn_sample/manager.cpp
-manager.h
-/home/wlk/workspace/boost_learn_sample/manager.h
+future
+-
+map
+-
+chrono
+-
 
 /home/wlk/workspace/boost_learn_sample/manager.h
 iostream
@@ -22,5 +24,9 @@ memory
 boost/filesystem.hpp
 -
 thread
+-
+mutex
+-
+fstream
 -
 

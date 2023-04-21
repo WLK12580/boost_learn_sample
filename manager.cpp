@@ -1,63 +1,55 @@
 #include "manager.h"
-using namespace Manager::FileManager;
+using namespace Manager::ThreadManager;
+// void threadmanager::AddSum(const int &val1,const int &val2){
+//     val_+=val1+val2;
+//     std::cout<<"val_="<<val_<<std::endl;
+// }
+// void threadmanager::UseMutex(const std::string &message,int &input_val){
+//     if(mu_l.try_lock())
+//     {
+//         std::cout<<"message:"<<message<<" val_num:"<<input_val<<std::endl;
+//         mu_l.unlock();
+//     }
+// }
+// void threadmanager::Producer(int i){
+//     std::unique_lock<std::mutex> lk(mu_l); //unique_lock在其生命周期内会保持锁住的状态
+//     while (val_)
+//     {
+//         producer.wait(lk);
+//     }
+//     val_=i;
+//     std::cout<<"ba---"<<std::endl;
+//     consume.notify_one();
+// }
+// void threadmanager::Consumer(){
+//     std::unique_lock<std::mutex> lk(mu_l);
+//     while(!val_){
+//         consume.wait(lk);
+//     }
+//     std::cout<<"val_="<<val_<<std::endl;
+//     val_=0;
+//     producer.notify_one();
+// }
 
-bool filemanager::GetRelativePath(const std::string &path, std::string &ret_relative)
-{
-    boost::filesystem::path base = boost::filesystem::current_path();
-    boost::system::error_code ec;
-    boost::filesystem::path ret_path = boost::filesystem::relative(path, base, ec);
-    if (ec)
-    {
-        std::cout << "ec.meaasge: " << ec.message() << std::endl;
-        ec.assign(errno,boost::system::system_category());
-        return false;
-    }
-    else
-    {
-        ret_relative = ret_path.string();
-        return true;
-    }
+int threadmanager::fun(int x) {
+  x++;
+  x *= 10;
+  std::cout << std::this_thread::get_id() << std::endl;
+  std::this_thread::sleep_for(std::chrono::seconds(5));
+  return x;
 }
-void filemanager::SetFileAllPerms(const std::string &filename){
-    if(!IsFIle(filename)){
-        std::cout<<"not File"<<std::endl;
-        return ;
-    }
-    auto perms=boost::filesystem::perms::owner_all;
-    boost::system::error_code ec;
-    boost::filesystem::permissions(filename,perms,ec);
-    if(ec){
-        std::cout<<"error: "<<ec.message()<<std::endl;
-        return ;
-    }else{
-        std::cout<<"set perms ok"<<std::endl;
-    }
+std::string threadmanager::RecvData(const std::string &data) {
+        std::cout << "start_:" << std::this_thread::get_id() << std::endl;
+        std::this_thread::sleep_for(std::chrono::seconds(5));
+        return data + "RecvData";
 }
-bool filemanager::IsFIle(const std::string &filename){
-    boost::system::error_code ec;
-    auto file_status=boost::filesystem::status(filename,ec);
-    if(ec){
-        std::cout<<"error: "<<ec.message()<<std::endl;
-        return false;
-    }
-    if(boost::filesystem::is_directory(file_status)){
-        std::cout<<"is derectory"<<std::endl;
-        return false;
-    }
-    if(file_status.type()==boost::filesystem::status_unknown){
-        std::cout<<"unknow type"<<std::endl;
-        return false;
-    }
-    std::cout<<"IsFile"<<std::endl;
-    return true;
+std::string threadmanager::RecvDataFrom(const std::string &recvdata) {
+        std::cout << "recv_start_id:" << std::this_thread::get_id() << std::endl;
+        std::this_thread::sleep_for(std::chrono::seconds(3));
+        return recvdata + "RecvData";
 }
-bool filemanager::IsFileOrDirectory(const std::string &file){
-    boost::system::error_code ec;
-    auto file_status=boost::filesystem::status(file,ec);
-    if(ec){
-        std::cout<<"error: "<<ec.message()<<std::endl;
-        return false;
-    }
-    std::cout<<"is File or Directory"<<std::endl;
-    return true;
+std::string threadmanager::RecvDataSent(const std::string &senddata) {
+        std::cout << "send_start_id:" << std::this_thread::get_id() << std::endl;
+        std::this_thread::sleep_for(std::chrono::seconds(20));
+        return senddata + "SendData";
 }

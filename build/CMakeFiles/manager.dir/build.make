@@ -57,18 +57,18 @@ include CMakeFiles/manager.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/manager.dir/flags.make
 
-CMakeFiles/manager.dir/main.cpp.o: CMakeFiles/manager.dir/flags.make
-CMakeFiles/manager.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wlk/workspace/boost_learn_sample/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/manager.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/manager.dir/main.cpp.o -c /home/wlk/workspace/boost_learn_sample/main.cpp
+CMakeFiles/manager.dir/copy_file.cpp.o: CMakeFiles/manager.dir/flags.make
+CMakeFiles/manager.dir/copy_file.cpp.o: ../copy_file.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wlk/workspace/boost_learn_sample/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/manager.dir/copy_file.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/manager.dir/copy_file.cpp.o -c /home/wlk/workspace/boost_learn_sample/copy_file.cpp
 
-CMakeFiles/manager.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/manager.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wlk/workspace/boost_learn_sample/main.cpp > CMakeFiles/manager.dir/main.cpp.i
+CMakeFiles/manager.dir/copy_file.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/manager.dir/copy_file.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wlk/workspace/boost_learn_sample/copy_file.cpp > CMakeFiles/manager.dir/copy_file.cpp.i
 
-CMakeFiles/manager.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/manager.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wlk/workspace/boost_learn_sample/main.cpp -o CMakeFiles/manager.dir/main.cpp.s
+CMakeFiles/manager.dir/copy_file.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/manager.dir/copy_file.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wlk/workspace/boost_learn_sample/copy_file.cpp -o CMakeFiles/manager.dir/copy_file.cpp.s
 
 CMakeFiles/manager.dir/manager.cpp.o: CMakeFiles/manager.dir/flags.make
 CMakeFiles/manager.dir/manager.cpp.o: ../manager.cpp
@@ -85,16 +85,18 @@ CMakeFiles/manager.dir/manager.cpp.s: cmake_force
 
 # Object files for target manager
 manager_OBJECTS = \
-"CMakeFiles/manager.dir/main.cpp.o" \
+"CMakeFiles/manager.dir/copy_file.cpp.o" \
 "CMakeFiles/manager.dir/manager.cpp.o"
 
 # External object files for target manager
 manager_EXTERNAL_OBJECTS =
 
-manager: CMakeFiles/manager.dir/main.cpp.o
+manager: CMakeFiles/manager.dir/copy_file.cpp.o
 manager: CMakeFiles/manager.dir/manager.cpp.o
 manager: CMakeFiles/manager.dir/build.make
 manager: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
+manager: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
+manager: /usr/lib/x86_64-linux-gnu/libboost_atomic.so.1.71.0
 manager: CMakeFiles/manager.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wlk/workspace/boost_learn_sample/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable manager"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/manager.dir/link.txt --verbose=$(VERBOSE)
