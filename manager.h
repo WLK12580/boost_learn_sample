@@ -3,8 +3,11 @@
 #include <boost/filesystem.hpp>
 #include <thread>
 #include<mutex>
-// #include<condition_variable>
+#include <future>
+#include<map>
+#include<chrono>
 #include<fstream>
+#include<functional>
 namespace Manager
 {
     namespace ThreadManager
