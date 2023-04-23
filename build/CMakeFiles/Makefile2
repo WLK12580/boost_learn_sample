@@ -53,7 +53,7 @@ CMAKE_BINARY_DIR = /home/wlk/workspace/boost_learn_sample/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/copy-file.dir/all
+all: CMakeFiles/manager.dir/all
 
 .PHONY : all
 
@@ -63,36 +63,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/copy-file.dir/clean
+clean: CMakeFiles/manager.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/copy-file.dir
+# Target rules for target CMakeFiles/manager.dir
 
 # All Build rule for target.
-CMakeFiles/copy-file.dir/all:
-	$(MAKE) -f CMakeFiles/copy-file.dir/build.make CMakeFiles/copy-file.dir/depend
-	$(MAKE) -f CMakeFiles/copy-file.dir/build.make CMakeFiles/copy-file.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wlk/workspace/boost_learn_sample/build/CMakeFiles --progress-num=1,2 "Built target copy-file"
-.PHONY : CMakeFiles/copy-file.dir/all
+CMakeFiles/manager.dir/all:
+	$(MAKE) -f CMakeFiles/manager.dir/build.make CMakeFiles/manager.dir/depend
+	$(MAKE) -f CMakeFiles/manager.dir/build.make CMakeFiles/manager.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wlk/workspace/boost_learn_sample/build/CMakeFiles --progress-num=1,2,3 "Built target manager"
+.PHONY : CMakeFiles/manager.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/copy-file.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wlk/workspace/boost_learn_sample/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/copy-file.dir/all
+CMakeFiles/manager.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wlk/workspace/boost_learn_sample/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/manager.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wlk/workspace/boost_learn_sample/build/CMakeFiles 0
-.PHONY : CMakeFiles/copy-file.dir/rule
+.PHONY : CMakeFiles/manager.dir/rule
 
 # Convenience name for target.
-copy-file: CMakeFiles/copy-file.dir/rule
+manager: CMakeFiles/manager.dir/rule
 
-.PHONY : copy-file
+.PHONY : manager
 
 # clean rule for target.
-CMakeFiles/copy-file.dir/clean:
-	$(MAKE) -f CMakeFiles/copy-file.dir/build.make CMakeFiles/copy-file.dir/clean
-.PHONY : CMakeFiles/copy-file.dir/clean
+CMakeFiles/manager.dir/clean:
+	$(MAKE) -f CMakeFiles/manager.dir/build.make CMakeFiles/manager.dir/clean
+.PHONY : CMakeFiles/manager.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -153,7 +153,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=copy-file
+CMAKE_PROJECT_NAME:STATIC=manager
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -224,10 +224,10 @@ boost_filesystem_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/boost_filesystem-1.71.
 boost_headers_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.71.0
 
 //Value Computed by CMake
-copy-file_BINARY_DIR:STATIC=/home/wlk/workspace/boost_learn_sample/build
+manager_BINARY_DIR:STATIC=/home/wlk/workspace/boost_learn_sample/build
 
 //Value Computed by CMake
-copy-file_SOURCE_DIR:STATIC=/home/wlk/workspace/boost_learn_sample
+manager_SOURCE_DIR:STATIC=/home/wlk/workspace/boost_learn_sample
 
 
 ########################

@@ -111,44 +111,71 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named copy-file
+# Target rules for targets named manager
 
 # Build rule for target.
-copy-file: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 copy-file
-.PHONY : copy-file
+manager: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 manager
+.PHONY : manager
 
 # fast build rule for target.
-copy-file/fast:
-	$(MAKE) -f CMakeFiles/copy-file.dir/build.make CMakeFiles/copy-file.dir/build
-.PHONY : copy-file/fast
+manager/fast:
+	$(MAKE) -f CMakeFiles/manager.dir/build.make CMakeFiles/manager.dir/build
+.PHONY : manager/fast
 
-copy_file.o: copy_file.cpp.o
+main.o: main.cpp.o
 
-.PHONY : copy_file.o
+.PHONY : main.o
 
 # target to build an object file
-copy_file.cpp.o:
-	$(MAKE) -f CMakeFiles/copy-file.dir/build.make CMakeFiles/copy-file.dir/copy_file.cpp.o
-.PHONY : copy_file.cpp.o
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/manager.dir/build.make CMakeFiles/manager.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-copy_file.i: copy_file.cpp.i
+main.i: main.cpp.i
 
-.PHONY : copy_file.i
+.PHONY : main.i
 
 # target to preprocess a source file
-copy_file.cpp.i:
-	$(MAKE) -f CMakeFiles/copy-file.dir/build.make CMakeFiles/copy-file.dir/copy_file.cpp.i
-.PHONY : copy_file.cpp.i
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/manager.dir/build.make CMakeFiles/manager.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-copy_file.s: copy_file.cpp.s
+main.s: main.cpp.s
 
-.PHONY : copy_file.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-copy_file.cpp.s:
-	$(MAKE) -f CMakeFiles/copy-file.dir/build.make CMakeFiles/copy-file.dir/copy_file.cpp.s
-.PHONY : copy_file.cpp.s
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/manager.dir/build.make CMakeFiles/manager.dir/main.cpp.s
+.PHONY : main.cpp.s
+
+manager.o: manager.cpp.o
+
+.PHONY : manager.o
+
+# target to build an object file
+manager.cpp.o:
+	$(MAKE) -f CMakeFiles/manager.dir/build.make CMakeFiles/manager.dir/manager.cpp.o
+.PHONY : manager.cpp.o
+
+manager.i: manager.cpp.i
+
+.PHONY : manager.i
+
+# target to preprocess a source file
+manager.cpp.i:
+	$(MAKE) -f CMakeFiles/manager.dir/build.make CMakeFiles/manager.dir/manager.cpp.i
+.PHONY : manager.cpp.i
+
+manager.s: manager.cpp.s
+
+.PHONY : manager.s
+
+# target to generate assembly for a file
+manager.cpp.s:
+	$(MAKE) -f CMakeFiles/manager.dir/build.make CMakeFiles/manager.dir/manager.cpp.s
+.PHONY : manager.cpp.s
 
 # Help Target
 help:
@@ -158,10 +185,13 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... copy-file"
-	@echo "... copy_file.o"
-	@echo "... copy_file.i"
-	@echo "... copy_file.s"
+	@echo "... manager"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
+	@echo "... manager.o"
+	@echo "... manager.i"
+	@echo "... manager.s"
 .PHONY : help
 
 
