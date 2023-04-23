@@ -1,3 +1,0 @@
-/home/wlk/workspace/boost_learn_sample/build/CMakeFiles/rebuild_cache.dir
-/home/wlk/workspace/boost_learn_sample/build/CMakeFiles/edit_cache.dir
-/home/wlk/workspace/boost_learn_sample/build/CMakeFiles/manager.dir
