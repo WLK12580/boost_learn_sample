@@ -1,1 +1,0 @@
-/usr/bin/c++   -pthread   CMakeFiles/manager.dir/main.cpp.o CMakeFiles/manager.dir/manager.cpp.o  -o manager  /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0 
